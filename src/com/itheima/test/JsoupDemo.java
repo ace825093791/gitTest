@@ -1,6 +1,5 @@
 package com.itheima.test;
 
-import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -21,7 +20,7 @@ public class JsoupDemo {
 	
 	public static void main(String[] args) throws IOException {
 
-        String baseURL = "http://meijiecao.net/2016/04/5086.html";
+        String baseURL = "http://tieba.baidu.com/f?kw=%E6%9C%B4%E5%A7%AC%E5%85%B0";
 
 
         List<String> urlList = new ArrayList<>();
@@ -49,7 +48,7 @@ public class JsoupDemo {
                 if(Long.parseLong(fileSize) > 100000){
                 	System.out.println(attr);
                 	System.out.println(fileSize);
-                	 FileOutputStream out = new FileOutputStream("F:\\jsoup\\01\\"+new Random().nextInt(10000) + ".jpg");
+                	 FileOutputStream out = new FileOutputStream("F:\\jsoup\\02\\"+new Random().nextInt(10000) + ".jpg");
                      int len;
                      byte[] b = new byte[1024*8];
                      while ((len = in.read(b))!= -1) {
